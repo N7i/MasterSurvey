@@ -12,11 +12,12 @@ namespace MasterSurvey.Core
 
         String Tips;
 
+        object AddNew(Type questionType, params object[] args);
+
         IReadOnlyCollection<IQuestion> Questions;
 
-        void AddQuestion(IQuestion question);
-        void RemoveQuestion(IQuestion question);
+        bool Remove(IQuestion questionToRemove);
 
-        String AnswerType;
+        String GetAnswerType();
     }
 }
