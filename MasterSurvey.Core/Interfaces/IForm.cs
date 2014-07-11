@@ -13,13 +13,6 @@ namespace MasterSurvey.Core.Interfaces
 
         IReadOnlyList<IQuestion> Questions { get; private set; }
 
-        void AppendQuestion(IQuestion question);
-
-        void RemoveQuestion(IQuestion target);
-        
-        void MoveBefore(IQuestion target,IQuestion toMove );
-        void MoveAfter(IQuestion target,IQuestion toMove);
-
         IReadOnlyDictionary<String, IFormAnswer> Answers { get; private set; }
 
         IFormAnswer AddOrCreateAnswerFor(String entity);
