@@ -39,7 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Interfaces\IAnswer.cs" />
+    <Compile Include="Interfaces\IForm.cs" />
+    <Compile Include="Interfaces\IFormAnswer.cs" />
+    <Compile Include="Interfaces\IQuestion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
