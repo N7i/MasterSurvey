@@ -20,14 +20,24 @@ namespace MasterSurvey.Impl
 
         public object AddNew(Type questionType, params object[] args)
         {
-            return new Object();
+            throw new NotImplementedException();
+        }
+
+        public object AddNew(String questionType, params object[] args)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Remove(IQuestion questionToRemove)
         {
-            return false;
+            throw new NotImplementedException();
         }
 
-        public abstract String GetAnswerType();
+        public abstract Type GetAnswerType();
+    }
+
+    public class RootQuestion : BaseQuestion
+    {
+        String GetAnswerType() { return null;  }
     }
 }

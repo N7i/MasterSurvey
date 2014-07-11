@@ -8,6 +8,6 @@ namespace MasterSurvey.Core
 {
     interface IAnswer
     {
-        bool IsValid;
+        bool IsValid();
     }
 }

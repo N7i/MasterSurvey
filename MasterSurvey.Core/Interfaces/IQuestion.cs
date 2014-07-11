@@ -14,6 +14,8 @@ namespace MasterSurvey.Core
 
         object AddNew(Type questionType, params object[] args);
 
+        object AddNew(String questionType, params object[] args);
+
         IReadOnlyCollection<IQuestion> Questions;
 
         bool Remove(IQuestion questionToRemove);
