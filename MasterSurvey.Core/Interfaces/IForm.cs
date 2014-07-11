@@ -11,7 +11,7 @@ namespace MasterSurvey.Core.Interfaces
         String Label { get;  private set; }
         DateTime CreatedAt { get; private set; }
 
-        IReadOnlyList<IQuestion> Questions { get; private set; }
+        IQuestion Questions { get; private set; }
 
         IReadOnlyDictionary<String, IFormAnswer> Answers { get; private set; }
 

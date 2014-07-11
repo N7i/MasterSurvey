@@ -43,7 +43,7 @@ namespace MasterSurvey.Impl
 
             if (null == formAnswer)
             {
-                formAnswer = new MilitaryFormAnswer();
+                formAnswer = new MilitaryFormAnswer(this);
                 _answers.Add(entity, formAnswer);
             }
             return formAnswer;

@@ -11,12 +11,12 @@ namespace MasterSurvey.Impl
     {
         String _title = String.Empty;
         String _tips = String.Empty;
-        List<IQuestion> _questions;
+        IQuestion _questions;
 
         public String Title { get { return _title; } set { _title = value; } }
         public String Tips { get { return _tips; } set { _tips = value; } }
 
-        public IReadOnlyList<IQuestion> Questions { get { return _questions; } }
+        public IQuestion Questions { get { return _questions; } }
 
         public object AddNew(Type questionType, params object[] args)
         {
