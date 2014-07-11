@@ -8,7 +8,15 @@ namespace MasterSurvey.Core
 {
     interface IQuestion
     {
+        String Title;
+
+        String Tips;
+
+        IReadOnlyCollection<IQuestion> Questions;
+
         void AddQuestion(IQuestion question);
         void RemoveQuestion(IQuestion question);
+
+        String AnswerType;
     }
 }
