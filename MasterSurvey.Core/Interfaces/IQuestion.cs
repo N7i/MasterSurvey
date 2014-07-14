@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 
 namespace MasterSurvey.Core
 {
-    interface IQuestion
+    public interface IQuestion
     {
-        String Title;
+        String Title { get; set; }
 
-        String Tips;
+        String Tips { get; set; }
+
+        bool AllowEmptyAnswer { get; set; }
 
         object AddNew(Type questionType, params object[] args);
 
         object AddNew(String questionType, params object[] args);
 
-        IReadOnlyCollection<IQuestion> Questions;
+        IQuestion Questions { get; }
 
         bool Remove(IQuestion questionToRemove);
 
-        String GetAnswerType();
+        Type GetAnswerType();
     }
 }

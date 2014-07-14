@@ -6,16 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterSurvey.Impl
+namespace MasterSurvey.Core
 {
     public class MilitaryFormAnswer : IFormAnswer
     {
         Dictionary<IQuestion, IAnswer> _questionContainer;
+        String _answerOwner;
+        IForm _formOwner;
 
+        
+        public IReadOnlyDictionary<IQuestion, IAnswer> QuestionsContainer { get { return _questionContainer; } }
 
-        IReadOnlyDictionary<IQuestion, IAnswer> QuestionsContainer { get { return _questionContainer; } }
+        public IForm OwnerForm { get { return _formOwner; } private set { _formOwner = value; } }
+        public String AnswerOwner { get { return _answerOwner; } private set { _answerOwner = value;  } }
 
-        bool AddAnswer(IAnswer answer, IQuestion question)
+        public bool AddAnswer(IAnswer answer, IQuestion question)
         {
             if (_questionContainer.ContainsKey(question))
             {
@@ -26,12 +31,12 @@ namespace MasterSurvey.Impl
             return true;
         }
 
-        IForm OwnerForm { get; private set; }
+        
 
         public MilitaryFormAnswer(IForm owner)
         {
             OwnerForm = owner;
-
+            _answerOwner = "Undefined";
         }
     }
 }

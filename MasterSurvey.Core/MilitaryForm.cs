@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterSurvey.Impl
+namespace MasterSurvey.Core
 {
     public class MilitaryForm : IForm
     {
         String _label = String.Empty;
         readonly DateTime _createdAt = new DateTime();
-        Dictionary<String, MilitaryFormAnswer> _answers;
+        Dictionary<String, IFormAnswer> _answers;
         IQuestion _rootQuestion = new RootQuestion();
 
         public String Label
@@ -31,14 +31,14 @@ namespace MasterSurvey.Impl
             get { return _rootQuestion; }
         }
 
-        public IReadOnlyDictionary<string, MilitaryFormAnswer> Answers
+        public IReadOnlyDictionary<string, IFormAnswer> Answers
         {
             get { return _answers;  }
         }
 
-        public MilitaryFormAnswer AddOrCreateAnswerFor(string entity)
+        public IFormAnswer AddOrCreateAnswerFor(string entity)
         {
-            MilitaryFormAnswer formAnswer = null;
+            IFormAnswer formAnswer = null;
             _answers.TryGetValue(entity, out formAnswer);
 
             if (null == formAnswer)

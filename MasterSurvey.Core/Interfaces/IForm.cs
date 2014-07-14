@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace MasterSurvey.Core.Interfaces
 {
-    interface IForm
+    public interface IForm
     {
-        String Label { get;  private set; }
-        DateTime CreatedAt { get; private set; }
+        String Label { get; set; }
+        DateTime CreatedAt { get; }
 
-        IQuestion Questions { get; private set; }
+        IQuestion Questions { get; }
 
-        IReadOnlyDictionary<String, IFormAnswer> Answers { get; private set; }
+        IReadOnlyDictionary<String, IFormAnswer> Answers { get; }
 
         IFormAnswer AddOrCreateAnswerFor(String entity);
     }

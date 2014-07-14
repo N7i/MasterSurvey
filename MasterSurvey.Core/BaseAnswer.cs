@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterSurvey.Impl
+namespace MasterSurvey.Core
 {
-    abstract class BaseAnswer : IAnswer
+    public abstract class BaseAnswer : IAnswer
     {
         public abstract bool IsValid();
     }

@@ -39,6 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseAnswer.cs" />
+    <Compile Include="BaseQuestion.cs" />
+    <Compile Include="MilitaryForm.cs" />
+    <Compile Include="MilitaryFormAnswer.cs" />
     <Compile Include="Interfaces\IAnswer.cs" />
     <Compile Include="Interfaces\IForm.cs" />
     <Compile Include="Interfaces\IFormAnswer.cs" />

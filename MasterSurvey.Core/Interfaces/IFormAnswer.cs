@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace MasterSurvey.Core
 {
-    class IFormAnswer
+    public interface IFormAnswer
     {
-        IReadOnlyDictionary<IQuestion, IAnswer> QuestionsContainer;
+        IReadOnlyDictionary<IQuestion, IAnswer> QuestionsContainer { get; }
 
         bool AddAnswer(IAnswer answer, IQuestion question);
 
-        String Owner { get; private set; }
+        String AnswerOwner { get; }
     }
 }

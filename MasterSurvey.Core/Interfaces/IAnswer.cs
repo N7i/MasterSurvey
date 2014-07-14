@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MasterSurvey.Core
 {
-    interface IAnswer
+    public interface IAnswer
     {
         bool IsValid();
     }
