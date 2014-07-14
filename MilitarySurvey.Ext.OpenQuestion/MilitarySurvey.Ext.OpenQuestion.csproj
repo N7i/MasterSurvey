@@ -7,7 +7,7 @@
     <ProjectGuid>{D0946256-C95F-46D5-9909-35DAEAAB186E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MasterSurvey.Ext.OpenQuestion</RootNamespace>
+    <RootNamespace>MilitarySurvey.Ext.OpenQuestion</RootNamespace>
     <AssemblyName>MasterSurvey.Ext.OpenQuestion</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -44,7 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MasterSurvey.Core\MilitarySurvey.Core.csproj">
+    <ProjectReference Include="..\MilitarySurvey.Core\MilitarySurvey.Core.csproj">
       <Project>{481219bb-ac3a-4d21-97d6-c4b302e7dae2}</Project>
       <Name>MilitarySurvey.Core</Name>
     </ProjectReference>

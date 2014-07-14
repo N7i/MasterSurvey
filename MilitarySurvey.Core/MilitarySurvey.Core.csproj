@@ -7,7 +7,7 @@
     <ProjectGuid>{481219BB-AC3A-4D21-97D6-C4B302E7DAE2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MasterSurvey</RootNamespace>
+    <RootNamespace>MilitarySurvey</RootNamespace>
     <AssemblyName>MasterSurvey</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
