@@ -12,10 +12,10 @@ namespace MasterSurvey.Core
     {
         String _label = String.Empty;
         readonly DateTime _createdAt = new DateTime();
-        Dictionary<String, IFormAnswer> _answers;
+        Dictionary<String, IFormAnswer> _formAnswers = new Dictionary<string,IFormAnswer>();
         IQuestion _rootQuestion = new RootQuestion();
 
-        public String Label
+        public String Title
         {
             get { return _label; }
             set { _label = value; }
@@ -33,18 +33,18 @@ namespace MasterSurvey.Core
 
         public IReadOnlyDictionary<string, IFormAnswer> Answers
         {
-            get { return _answers;  }
+            get { return _formAnswers;  }
         }
 
-        public IFormAnswer AddOrCreateAnswerFor(string entity)
+        public IFormAnswer FindOrCreateAnswerFor(string entity)
         {
             IFormAnswer formAnswer = null;
-            _answers.TryGetValue(entity, out formAnswer);
+            _formAnswers.TryGetValue(entity, out formAnswer);
 
             if (null == formAnswer)
             {
                 formAnswer = new MilitaryFormAnswer(this);
-                _answers.Add(entity, formAnswer);
+                _formAnswers.Add(entity, formAnswer);
             }
             return formAnswer;
         }

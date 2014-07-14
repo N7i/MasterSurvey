@@ -12,7 +12,7 @@ namespace MasterSurvey.Core
         //TODO should be readonly config object
         protected IQuestion LinkedQuestion { get; private set; }
 
-        private BaseAnswer();
+        private BaseAnswer() { throw new NotSupportedException();  }
 
         public BaseAnswer(IQuestion linkedQuestion)
         {

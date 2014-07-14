@@ -8,13 +8,13 @@ namespace MasterSurvey.Core.Interfaces
 {
     public interface IForm
     {
-        String Label { get; set; }
+        String Title { get; set; }
         DateTime CreatedAt { get; }
 
         IQuestion Questions { get; }
 
         IReadOnlyDictionary<String, IFormAnswer> Answers { get; }
 
-        IFormAnswer AddOrCreateAnswerFor(String entity);
+        IFormAnswer FindOrCreateAnswerFor(String entity);
     }
 }

@@ -10,11 +10,11 @@ namespace MasterSurvey.Core
 {
     public class MilitaryFormAnswer : IFormAnswer
     {
-        Dictionary<IQuestion, IAnswer> _questionContainer;
+        Dictionary<IQuestion, IAnswer> _questionsAnswer;
         String _answerOwner;
         IForm _formOwner;
         
-        public IReadOnlyDictionary<IQuestion, IAnswer> QuestionsContainer { get { return _questionContainer; } }
+        public IReadOnlyDictionary<IQuestion, IAnswer> QuestionsAnswer { get { return _questionsAnswer; } }
 
         public IForm OwnerForm { get { return _formOwner; } private set { _formOwner = value; } }
         public String AnswerOwner { get { return _answerOwner; } private set { _answerOwner = value;  } }
@@ -22,7 +22,7 @@ namespace MasterSurvey.Core
         public IAnswer FindAnswer(IQuestion question)
         {
             IAnswer answer = null;
-            _questionContainer.TryGetValue(question, out answer);
+            _questionsAnswer.TryGetValue(question, out answer);
 
             return answer;
         }
@@ -36,7 +36,7 @@ namespace MasterSurvey.Core
                                         question
                                         );
 
-            _questionContainer.Add(question, anwser);
+            _questionsAnswer.Add(question, anwser);
             return anwser;
         }
 
@@ -45,6 +45,7 @@ namespace MasterSurvey.Core
         {
             OwnerForm = owner;
             _answerOwner = "Undefined";
+            _questionsAnswer = new Dictionary<IQuestion, IAnswer>();
         }
     }
 }

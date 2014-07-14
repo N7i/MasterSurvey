@@ -8,7 +8,7 @@ namespace MasterSurvey.Core
 {
     public interface IFormAnswer
     {
-        IReadOnlyDictionary<IQuestion, IAnswer> QuestionsContainer { get; }
+        IReadOnlyDictionary<IQuestion, IAnswer> QuestionsAnswer { get; }
 
         IAnswer FindAnswer(IQuestion question);
 

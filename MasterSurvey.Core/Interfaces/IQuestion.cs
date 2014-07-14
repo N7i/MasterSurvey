@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MasterSurvey.Core
 {
-    public interface IQuestion
+    public interface IQuestion : IEnumerable
     {
         String Title { get; set; }
 
@@ -14,9 +15,9 @@ namespace MasterSurvey.Core
 
         bool AllowEmptyAnswer { get; set; }
 
-        object AddNew(Type questionType, params object[] args);
+        IQuestion AddNew(Type questionType, params object[] args);
 
-        object AddNew(String questionType, params object[] args);
+        IQuestion AddNew(String questionType, params object[] args);
 
         IQuestion Questions { get; }
 
