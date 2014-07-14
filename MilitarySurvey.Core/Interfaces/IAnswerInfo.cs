@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterSurvey.Core
+namespace MilitarySurvey.Interfaces
 {
-    public interface IAnswer
+    public interface IAnswerInfo
     {
-        bool IsValid();
+        bool IsEmpty();
     }
 }

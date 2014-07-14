@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using MasterSurvey.Core.Interfaces;
-using MasterSurvey.Core;
-using MasterSurvey.Ext.FreeQuestion;
+using MilitarySurvey.Core.Interfaces;
+using MilitarySurvey.Core;
+using MilitarySurvey.Ext.OpenQuestion;
 
-namespace MasterSurvey.Tests
+namespace MilitarySurvey.Tests
 {
     [TestFixture]
     public class FormTests
@@ -17,7 +17,7 @@ namespace MasterSurvey.Tests
         public void CreateEmptyForm()
         {
             // Arrange
-            IForm myForm = new MilitaryForm();
+            IForm myForm = new QuestionGroup();
 
             // Act
 
@@ -30,11 +30,11 @@ namespace MasterSurvey.Tests
         public void AddFormQuestions() 
         {
             // Arrange
-            IForm myForm = new MilitaryForm();
+            IForm myForm = new QuestionGroup();
 
             // Act 
-            IQuestion myFirstQuestion = myForm.Questions.AddNew(typeof(FreeQuestion));
-            IQuestion mySecondQuestion = myForm.Questions.AddNew(typeof(FreeQuestion));
+            IQuestionInfo myFirstQuestion = myForm.Questions.AddNew(typeof(OpenQuestion));
+            IQuestionInfo mySecondQuestion = myForm.Questions.AddNew(typeof(OpenQuestion));
             
             // Assert
             Assert.That(myForm.Questions.Count, Is.EqualTo(2));
@@ -46,7 +46,7 @@ namespace MasterSurvey.Tests
         public void FindOrCreateFormAnwser()
         {
             // Arrange
-            IForm myForm = new MilitaryForm();
+            IForm myForm = new QuestionGroup();
 
             // Act
             IReadOnlyDictionary<string, IFormAnswer> answers = myForm.Answers;
