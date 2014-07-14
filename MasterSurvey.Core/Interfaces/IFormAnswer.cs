@@ -10,7 +10,9 @@ namespace MasterSurvey.Core
     {
         IReadOnlyDictionary<IQuestion, IAnswer> QuestionsContainer { get; }
 
-        bool AddAnswer(IAnswer answer, IQuestion question);
+        IAnswer FindAnswer(IQuestion question);
+
+        IAnswer AddAnswerFor(IQuestion question);
 
         String AnswerOwner { get; }
     }
