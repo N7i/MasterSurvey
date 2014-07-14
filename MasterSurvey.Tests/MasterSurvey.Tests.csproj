@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,8 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="FormTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MasterSurvey.Core\MasterSurvey.Core.csproj">
+      <Project>{481219bb-ac3a-4d21-97d6-c4b302e7dae2}</Project>
+      <Name>MasterSurvey.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterSurvey.Ext.OpenQuestion\MasterSurvey.Ext.FreeQuestion.csproj">
+      <Project>{d0946256-c95f-46d5-9909-35daeaab186e}</Project>
+      <Name>MasterSurvey.Ext.FreeQuestion</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
