@@ -1,11 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterSurvey.Core", "MasterSurvey.Core\MasterSurvey.Core.csproj", "{481219BB-AC3A-4D21-97D6-C4B302E7DAE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterSurvey.Tests", "MasterSurvey.Tests\MasterSurvey.Tests.csproj", "{B3EB6663-729A-430A-AB79-423B2FF0E8E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterSurvey.Ext.FreeQuestion", "MasterSurvey.Ext.OpenQuestion\MasterSurvey.Ext.FreeQuestion.csproj", "{D0946256-C95F-46D5-9909-35DAEAAB186E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D58D255F-9D25-4587-892C-2E2975401C22}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +28,10 @@ Global
 		{B3EB6663-729A-430A-AB79-423B2FF0E8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3EB6663-729A-430A-AB79-423B2FF0E8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3EB6663-729A-430A-AB79-423B2FF0E8E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0946256-C95F-46D5-9909-35DAEAAB186E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0946256-C95F-46D5-9909-35DAEAAB186E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0946256-C95F-46D5-9909-35DAEAAB186E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0946256-C95F-46D5-9909-35DAEAAB186E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
