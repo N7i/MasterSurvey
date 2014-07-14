@@ -9,6 +9,15 @@ namespace MasterSurvey.Core
 {
     public abstract class BaseAnswer : IAnswer
     {
+        //TODO should be readonly config object
+        protected IQuestion LinkedQuestion { get; private set; }
+
+        private BaseAnswer();
+
+        public BaseAnswer(IQuestion linkedQuestion)
+        {
+            LinkedQuestion = linkedQuestion;
+        }
         public abstract bool IsValid();
     }
 }
