@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{481219BB-AC3A-4D21-97D6-C4B302E7DAE2}</ProjectGuid>
+    <ProjectGuid>{D0946256-C95F-46D5-9909-35DAEAAB186E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MasterSurvey</RootNamespace>
-    <AssemblyName>MasterSurvey</AssemblyName>
+    <RootNamespace>MasterSurvey.Ext.OpenQuestion</RootNamespace>
+    <AssemblyName>MasterSurvey.Ext.OpenQuestion</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\plugins\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,15 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseAnswer.cs" />
-    <Compile Include="BaseQuestion.cs" />
-    <Compile Include="MilitaryForm.cs" />
-    <Compile Include="MilitaryFormAnswer.cs" />
-    <Compile Include="Interfaces\IAnswer.cs" />
-    <Compile Include="Interfaces\IForm.cs" />
-    <Compile Include="Interfaces\IFormAnswer.cs" />
-    <Compile Include="Interfaces\IQuestion.cs" />
+    <Compile Include="OpenAnswer.cs" />
+    <Compile Include="OpenQuestion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MasterSurvey.Core\MilitarySurvey.Core.csproj">
+      <Project>{481219bb-ac3a-4d21-97d6-c4b302e7dae2}</Project>
+      <Name>MilitarySurvey.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MasterSurvey.Core
+namespace MilitarySurvey.Interfaces
 {
-    public interface IQuestion : IEnumerable
+    public interface IQuestionInfo
     {
         String Title { get; set; }
 
@@ -15,14 +15,10 @@ namespace MasterSurvey.Core
 
         bool AllowEmptyAnswer { get; set; }
 
-        IQuestion AddNew(Type questionType, params object[] args);
-
-        IQuestion AddNew(String questionType, params object[] args);
-
-        IQuestion Questions { get; }
-
-        bool Remove(IQuestion questionToRemove);
+        void Display();
 
         Type GetAnswerType();
+
+        IAnswerInfo CreateAnswer();
     }
 }
